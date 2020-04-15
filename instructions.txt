@@ -1,0 +1,5 @@
+Imagen docker subida:
+ - https://hub.docker.com/repository/docker/laury46/myexerciselab
+
+
+docker build -t myexerciselab .
