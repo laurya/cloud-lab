@@ -1,4 +1,9 @@
+sudo: required
 services:
  - docker
 script:
  - docker build -t myexerciselab .
+after_success:
+ - docker login -u $DOCKER_USER -p $DOCKER_PASSWORD
+ - docker tag myexerciselab $DOCKER_USER/myexerciselab
+ - docker push $DOCKER_USER/myexerciselab
